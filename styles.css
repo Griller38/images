@@ -392,7 +392,7 @@
     #main__img {
         height: 90%; /* Nog groter op kleine schermen */
         width: 90%;
-        top: -50px; /* Aanpassen voor kleinere schermen */
+        top: 150px; /* Aanpassen voor kleinere schermen */
         left: 0; /* Centraal */
         z-index: 0;
     }
