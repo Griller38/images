@@ -34,23 +34,61 @@
     </div>
    </nav>
 
-   <!-- Hero Section -->
-    <div class="main">
-        <div class="main__container">
-            <div class="main__content">
-                <h1></h1>
-                <h2></h2>
-                <p></p>
-            </div>
-        </div>
-    </div>
+   <!-- fill in Section -->
+     
+   <section>
+    <form action="send_mail.php" method="post">
+        <fieldset> 
+            <legend>Bestel Hier</legend>
 
-    <!-- Services Section -->
-    <div class="services" id="services">
-        <h1></h1>
-        <div class="services__container">
-        </div>
-    </div>
+            <div class="form-group">
+                <label for="fullname">Naam:</label> 
+                <input type="text" name="fullname" id="fullname">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Telefoon:</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="adres">Adres:</label>
+                <input type="text" name="adres" id="adres">
+            </div>
+
+            <div class="form-group">
+                <label for="zipcode">Postcode:</label>
+                <input type="text" name="zipcode" id="zipcode">
+            </div>
+
+            <div class="form-group">
+                <label for="place">Woonplaats:</label>
+                <input type="text" name="place" id="place">
+            </div>
+
+            <div class="form-group checks">
+                <label for="model">Model:</label>
+                <input type="checkbox" name="model" id="model"> Barbecue
+                <input type="checkbox" name="model2" id="model2"> Kachel
+            </div>
+
+            <div class="form-group">
+                <label for="opmerking">Opmerking:</label>
+                <textarea name="opmerking" id="opmerking"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="Submit" id="submit" value="bestel">
+            </div>
+        </fieldset>
+    </form>
+</section>
+
 
      <!-- Footer Section -->
       <div class="footer__container">

@@ -660,3 +660,93 @@
         width: 100%;
     }
 }
+
+
+/* Fieldset and legend */
+
+section {
+    background-color: #dcdcdc; /* Lichtgrijze achtergrond */
+    padding: 2rem;           /* Ruimte binnen de sectie */
+    border-radius: 8px;      /* Ronde hoeken voor een mooi effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+}
+
+fieldset {
+    margin: 2em 0;
+    padding: 1em 2em;
+    border: solid 2px #ccc;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend {
+    font-size: 1.25rem;
+    padding: 0.5em;
+    color: #575757;
+}
+
+label {
+    display: flex;
+    margin-top: 1rem;
+    color: #575757;
+}
+
+.checks label {
+    margin-top: 0;
+    color: #575757;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+form {
+    max-width: 600px; 
+    margin: 0 auto;   
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; 
+    color: #575757;
+}
+
+label {
+    width: 120px;        
+    margin-right: 1rem;  
+    text-align: right;  
+    border-radius: 4px; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    flex: 1;             
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 100px; 
+    border: solid 2px #ccc;
+    border-radius: 4px;
+}
+
+input[type="checkbox"] {
+    margin-left: 0.5rem;
+}
+
+input[type="submit"] {
+    background-color: #8b4513;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background-color: #703810;
+}
