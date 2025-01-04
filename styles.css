@@ -357,10 +357,10 @@
     }
 
     #main__img {
-        height: 70%; /* Groter maken */
+        height: 70%; 
         width: 70%;
-        top: 210px; /* Pas aan als nodig voor positionering */
-        left: 50px; /* Centraal of links afhankelijk van jouw design */
+        top: 210px; 
+        left: 50px; 
         z-index: 0;
     }
 }
@@ -390,10 +390,10 @@
     }
 
     #main__img {
-        height: 90%; /* Nog groter op kleine schermen */
+        height: 90%; 
         width: 90%;
-        top: 150px; /* Aanpassen voor kleinere schermen */
-        left: 0; /* Centraal */
+        top: 150px; 
+        left: 0; 
         z-index: 0;
     }
 }
@@ -505,25 +505,33 @@
 @media screen and (max-width: 480px) {
     .services__container {
         flex-direction: column;
-        align-items: center; /* Zorgt ervoor dat kaarten gecentreerd zijn */
+        align-items: center; 
     }
 
     .services__card {
-        width: 90%; /* Verkleint kaarten zodat ze binnen de viewport passen */
-        height: auto; /* Laat de hoogte zich aanpassen aan de inhoud */
-    }
-
-    .services h2, .services__card p, .services__card button {
-        position: static; /* Statische positionering zodat teksten niet buiten kaarten vallen */
-        margin-top: 1rem;
-        text-align: center;
-    }
-    .services__card {
+        width: 50vh; 
+        height: 50vh; 
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; 
+        align-items: flex-start; 
+        padding: 1rem; 
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    .services h2, .services__card p, .services__card button {
+        position: static; 
+        margin: 0; 
+        text-align: left; 
+    }
+
+    .services__card button {
+        margin-top: 0.5rem; 
+    }
 }
+
 
 /* Footer CSS */ 
 .footer__container {
