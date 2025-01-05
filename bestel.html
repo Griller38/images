@@ -91,30 +91,6 @@
     <div id="responseMessage" style="margin-top: 20px; display: none;"></div>
 </section>
 
-<script>
-    document.getElementById('orderForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Voorkomt standaard formulierverzending
-
-        const formData = new FormData(this);
-
-        fetch('send_mail.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            console.log("Server Response:", data);
-            document.getElementById('responseMessage').style.display = 'block';
-            document.getElementById('responseMessage').innerText = data; // Laat de serverreactie zien
-        })
-        .catch(error => {
-            console.error("Error:", error);
-            document.getElementById('responseMessage').style.display = 'block';
-            document.getElementById('responseMessage').innerText = 'Er is een fout opgetreden: ' + error.message;
-        });
-    });
-</script>
-
 
      <!-- Footer Section -->
       <div class="footer__container">
