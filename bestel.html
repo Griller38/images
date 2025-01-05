@@ -37,38 +37,38 @@
    <!-- fill in Section -->
      
    <section>
-    <form action="send_mail.php" method="post">
+    <form id="orderForm">
         <fieldset> 
             <legend>Bestel Hier</legend>
 
             <div class="form-group">
                 <label for="fullname">Naam:</label> 
-                <input type="text" name="fullname" id="fullname">
+                <input type="text" name="fullname" id="fullname" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" required>
             </div>
 
             <div class="form-group">
                 <label for="phone">Telefoon:</label>
-                <input type="tel" name="phone" id="phone">
+                <input type="tel" name="phone" id="phone" required>
             </div>
 
             <div class="form-group">
                 <label for="adres">Adres:</label>
-                <input type="text" name="adres" id="adres">
+                <input type="text" name="adres" id="adres" required>
             </div>
 
             <div class="form-group">
                 <label for="zipcode">Postcode:</label>
-                <input type="text" name="zipcode" id="zipcode">
+                <input type="text" name="zipcode" id="zipcode" required>
             </div>
 
             <div class="form-group">
                 <label for="place">Woonplaats:</label>
-                <input type="text" name="place" id="place">
+                <input type="text" name="place" id="place" required>
             </div>
 
             <div class="form-group checks">
@@ -83,11 +83,37 @@
             </div>
 
             <div class="form-group">
-                <input type="Submit" id="submit" value="bestel">
+                <button type="submit" id="submit">Bestel</button>
             </div>
         </fieldset>
     </form>
+
+    <div id="responseMessage" style="margin-top: 20px; display: none;"></div>
 </section>
+
+<script>
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Voorkomt standaard formulierverzending
+
+        const formData = new FormData(this);
+
+        fetch('send_mail.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log("Server Response:", data);
+            document.getElementById('responseMessage').style.display = 'block';
+            document.getElementById('responseMessage').innerText = data; // Laat de serverreactie zien
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById('responseMessage').style.display = 'block';
+            document.getElementById('responseMessage').innerText = 'Er is een fout opgetreden: ' + error.message;
+        });
+    });
+</script>
 
 
      <!-- Footer Section -->
@@ -111,7 +137,7 @@
         <div class="social__media">
             <div class="social__media--wrap">
                 <div class="footer__logo">
-                    <a href="/" id="footer__logo"> <i class="fa-solid fa-fire"></i> Grillvelgen</a>
+                    <a href="index.html" id="footer__logo"> <i class="fa-solid fa-fire"></i> Grillvelgen</a>
                 </div>
                 <p class="website__rights">© Grillvelgen 2025. All rigths
                     reserved</p>

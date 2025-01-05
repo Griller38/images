@@ -11,3 +11,4 @@ document.getElementById('scrollToServices').addEventListener('click', function()
         behavior: 'smooth'
     });
 });
+
