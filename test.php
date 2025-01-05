@@ -1,5 +1,5 @@
 <?php
-$to = "jouw_email@voorbeeld.com"; // Vervang dit door je eigen e-mailadres
+$to = "plusone356@gmail.com"; // Vervang dit door je eigen e-mailadres
 $subject = "Test e-mail";
 $message = "Dit is een test e-mail om te controleren of de server e-mails kan verzenden.";
 $headers = "From: webmaster@example.com";
