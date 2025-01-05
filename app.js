@@ -12,3 +12,8 @@ document.getElementById('scrollToServices').addEventListener('click', function()
     });
 });
 
+fetch('send_mail.php', {
+    method: 'POST',
+    body: formData
+})
+
