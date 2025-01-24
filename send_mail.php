@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Stel een e-mail samen
-    $to = 'jouw_email@voorbeeld.com'; // Vervang dit door je eigen e-mailadres
+    $to = 'plusone356@gmail.com'; // Vervang dit door je eigen e-mailadres
     $subject = 'Nieuwe Bestelling';
     $message = "Naam: $fullname\nEmail: $email\nTelefoon: $phone\nAdres: $adres\nPostcode: $zipcode\nWoonplaats: $place\nModel: $model $model2\nOpmerking: $opmerking";
     $headers = "From: $email";
